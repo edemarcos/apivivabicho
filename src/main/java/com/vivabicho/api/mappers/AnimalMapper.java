@@ -2,7 +2,7 @@ package com.vivabicho.api.mappers;
 
 import com.vivabicho.api.DTO.AnimalDTO;
 import com.vivabicho.api.models.Animal;
-import com.vivabicho.api.models.Especie;
+import com.vivabicho.api.models.Species;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
@@ -14,34 +14,34 @@ public class AnimalMapper {
     public AnimalDTO mapperToAnimalDTO(Animal animal) {
         AnimalDTO animalDTO = new AnimalDTO();
         animalDTO.setId(animal.getId());
-        animalDTO.setNome(animal.getNome());
-        animalDTO.setEspecieId(animal.getEspecie().getId());
-        animalDTO.setRaca(animal.getRaca());
-        animalDTO.setIdade(animal.getIdade());
-        animalDTO.setSexo(animal.getSexo());
-        animalDTO.setCor(animal.getCor());
-        animalDTO.setTamanho(animal.getTamanho());
-        animalDTO.setPeso(animal.getPeso());
-        animalDTO.setDescricao(animal.getDescricao());
-        animalDTO.setDisponivelParaAdocao(animal.isDisponivelParaAdocao());
+        animalDTO.setName(animal.getName());
+        animalDTO.setSpecieId(animal.getSpecies().getId());
+        animalDTO.setBreed(animal.getBreed());
+        animalDTO.setAge(animal.getAge());
+        animalDTO.setGender(animal.getGender());
+        animalDTO.setColor(animal.getColor());
+        animalDTO.setSize(animal.getSize());
+        animalDTO.setWeight(animal.getWeight());
+        animalDTO.setDescription(animal.getDescription());
+        animalDTO.setAvailableForAdoption(animal.isAvailableForAdoption());
         return animalDTO;
     }
 
     public Animal mapperToAnimal(AnimalDTO animalDTO) {
         Animal animal = new Animal();
         animal.setId(animalDTO.getId());
-        animal.setNome(animalDTO.getNome());
-        Especie especie = new Especie();
-        especie.setId(animalDTO.getEspecieId());
-        animal.setEspecie(especie);
-        animal.setRaca(animalDTO.getRaca());
-        animal.setIdade(animalDTO.getIdade());
-        animal.setSexo(animalDTO.getSexo());
-        animal.setCor(animalDTO.getCor());
-        animal.setTamanho(animalDTO.getTamanho());
-        animal.setPeso(animalDTO.getPeso());
-        animal.setDescricao(animalDTO.getDescricao());
-        animal.setDisponivelParaAdocao(animalDTO.isDisponivelParaAdocao());
+        animal.setName(animalDTO.getName());
+        Species specie = new Species();
+        specie.setId(animalDTO.getSpecieId());
+        animal.setSpecies(specie);
+        animal.setBreed(animalDTO.getBreed());
+        animal.setAge(animalDTO.getAge());
+        animal.setGender(animalDTO.getGender());
+        animal.setColor(animalDTO.getColor());
+        animal.setSize(animalDTO.getSize());
+        animal.setWeight(animalDTO.getWeight());
+        animal.setDescription(animalDTO.getDescription());
+        animal.setAvailableForAdoption(animalDTO.isAvailableForAdoption());
         return animal;
     }
 

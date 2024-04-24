@@ -2,6 +2,7 @@ package com.vivabicho.api.models;
 
 import com.vivabicho.api.role.Role;
 import jakarta.persistence.*;
+import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotNull;
 import lombok.Data;
 
@@ -23,6 +24,7 @@ public class User implements Serializable {
     private String name;
     @Column(length = 120, nullable = false, unique = true)
     @NotNull
+    @Email
     private String email;
     @Column(length = 60, nullable = false)
     @NotNull

@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/animal")
+@RequestMapping(value = "/animals")
 public class AnimalController {
 
     @Autowired
@@ -40,8 +40,8 @@ public class AnimalController {
     }
 
     @PreAuthorize("hasRole('ADMIN')")
-    @PutMapping(value = "/{id}", consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<AnimalDTO> update(@RequestBody AnimalDTO animalDTO, @PathVariable Long id){
-        return ResponseEntity.ok(service.update(animalMapper.mapperToAnimal(animalDTO), id));
+    @PutMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
+    public ResponseEntity<AnimalDTO> update(@RequestBody AnimalDTO animalDTO){
+        return ResponseEntity.ok(service.update(animalMapper.mapperToAnimal(animalDTO)));
     }
 }
