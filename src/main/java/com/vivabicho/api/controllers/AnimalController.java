@@ -1,6 +1,6 @@
 package com.vivabicho.api.controllers;
 
-import com.vivabicho.api.DTO.AnimalDTO;
+import com.vivabicho.api.dto.AnimalDTO;
 import com.vivabicho.api.mappers.AnimalMapper;
 import com.vivabicho.api.services.AnimalService;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
 package com.vivabicho.api.mappers;
 
-import com.vivabicho.api.DTO.AnimalDTO;
+import com.vivabicho.api.dto.AnimalDTO;
 import com.vivabicho.api.models.Animal;
 import com.vivabicho.api.models.Species;
 import org.springframework.stereotype.Component;

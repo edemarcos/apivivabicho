@@ -1,4 +1,4 @@
-package com.vivabicho.api.DTO;
+package com.vivabicho.api.dto;
 
 import com.vivabicho.api.models.Species;
 import lombok.Data;

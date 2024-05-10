@@ -1,6 +1,7 @@
 package com.vivabicho.api.controllers;
 
-import com.vivabicho.api.DTO.UserDTO;
+import com.vivabicho.api.dto.RegisterUserDTO;
+import com.vivabicho.api.dto.ResponseUserDTO;
 import com.vivabicho.api.models.User;
 import com.vivabicho.api.services.UserService;
 import jakarta.validation.Valid;
@@ -14,26 +15,26 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping(value = "/user")
+@RequestMapping(value = "/users")
 public class UserController {
 
     @Autowired
     private UserService service;
 
     @GetMapping(value = "/{id}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<UserDTO> findById(@PathVariable Long id){
-        UserDTO userDTO =  service.findById(id);
-        return ResponseEntity.status(HttpStatus.OK).body(userDTO);
+    public ResponseEntity<ResponseUserDTO> findById(@PathVariable Long id){
+        ResponseUserDTO responseUserDTO =  service.findById(id);
+        return ResponseEntity.status(HttpStatus.OK).body(responseUserDTO);
     }
 
     @GetMapping(produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<List<UserDTO>> findAll(){
-        List<UserDTO> userDTOList = service.findAll();
-        return ResponseEntity.status(HttpStatus.OK).body(userDTOList);
+    public ResponseEntity<List<ResponseUserDTO>> findAll(){
+        List<ResponseUserDTO> responseUserDTOList = service.findAll();
+        return ResponseEntity.status(HttpStatus.OK).body(responseUserDTOList);
     }
 
     @PostMapping(consumes = MediaType.APPLICATION_JSON_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
-    public ResponseEntity<UserDTO> save(@RequestBody @Valid User userRequest) {
+    public ResponseEntity<ResponseUserDTO> save(@RequestBody @Valid RegisterUserDTO userRequest) {
         var user = new User();
         BeanUtils.copyProperties(userRequest, user);
         return ResponseEntity.status(HttpStatus.CREATED).body(service.save(user));

@@ -1,6 +1,6 @@
 package com.vivabicho.api.controllers;
 
-import com.vivabicho.api.DTO.SpecieDTO;
+import com.vivabicho.api.dto.SpecieDTO;
 import com.vivabicho.api.services.EspecieService;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
