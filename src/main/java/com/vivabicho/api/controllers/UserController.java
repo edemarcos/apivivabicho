@@ -1,7 +1,7 @@
 package com.vivabicho.api.controllers;
 
-import com.vivabicho.api.dto.RegisterUserDTO;
-import com.vivabicho.api.dto.ResponseUserDTO;
+import com.vivabicho.api.controllers.dto.RegisterUserDTO;
+import com.vivabicho.api.controllers.dto.ResponseUserDTO;
 import com.vivabicho.api.models.User;
 import com.vivabicho.api.services.UserService;
 import jakarta.validation.Valid;

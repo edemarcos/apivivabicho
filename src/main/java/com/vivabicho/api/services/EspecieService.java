@@ -1,6 +1,6 @@
 package com.vivabicho.api.services;
 
-import com.vivabicho.api.dto.SpecieDTO;
+import com.vivabicho.api.controllers.dto.SpecieDTO;
 import com.vivabicho.api.models.Species;
 import com.vivabicho.api.repositories.EspecieRepository;
 import com.vivabicho.api.services.exceptions.EntityNotFoundException;

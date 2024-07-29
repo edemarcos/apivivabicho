@@ -1,4 +1,4 @@
-package com.vivabicho.api.dto;
+package com.vivabicho.api.controllers.dto;
 
 import lombok.Data;
 import org.springframework.stereotype.Component;

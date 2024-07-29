@@ -1,6 +1,6 @@
 package com.vivabicho.api.services;
 
-import com.vivabicho.api.dto.ResponseUserDTO;
+import com.vivabicho.api.controllers.dto.ResponseUserDTO;
 import com.vivabicho.api.models.User;
 import com.vivabicho.api.repositories.UserRespository;
 import com.vivabicho.api.services.exceptions.EntityNotFoundException;

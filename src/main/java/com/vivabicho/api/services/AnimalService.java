@@ -1,7 +1,7 @@
 package com.vivabicho.api.services;
 
-import com.vivabicho.api.dto.AnimalDTO;
-import com.vivabicho.api.mappers.AnimalMapper;
+import com.vivabicho.api.controllers.dto.AnimalDTO;
+import com.vivabicho.api.controllers.mappers.AnimalMapper;
 import com.vivabicho.api.models.Animal;
 import com.vivabicho.api.repositories.AnimalRepository;
 import com.vivabicho.api.services.exceptions.EntityNotFoundException;

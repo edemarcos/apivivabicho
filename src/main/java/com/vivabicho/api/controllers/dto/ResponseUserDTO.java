@@ -1,4 +1,4 @@
-package com.vivabicho.api.dto;
+package com.vivabicho.api.controllers.dto;
 
 import com.vivabicho.api.models.User;
 import lombok.Data;

@@ -1,7 +1,7 @@
 package com.vivabicho.api.controllers;
 
-import com.vivabicho.api.dto.LoginResponseDTO;
-import com.vivabicho.api.dto.LoginResquestDTO;
+import com.vivabicho.api.controllers.dto.LoginResponseDTO;
+import com.vivabicho.api.controllers.dto.LoginResquestDTO;
 import com.vivabicho.api.models.User;
 import com.vivabicho.api.repositories.UserRespository;
 import com.vivabicho.api.config.security.TokenService;
